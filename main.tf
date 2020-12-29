@@ -1,11 +1,3 @@
-provider "azurerm" {
-  features {
-    virtual_machine {
-        delete_os_disk_on_deletion = var.delete_disks_on_termination
-    }
-  }
-}
-
 data "azurerm_virtual_network" "vm_vnet" {
   name                = var.target_vnet_name
   resource_group_name = var.target_vnet_resource_group
