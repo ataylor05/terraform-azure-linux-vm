@@ -18,8 +18,8 @@ resource "azurerm_resource_group" "vm_rg" {
   }
 }
 
-module "network-spoke" {
-    source                      = "app.terraform.io/ANET/network-spoke/azure"
+module "linux-vm" {
+    source                      = "app.terraform.io/ANET/linux-vm/azure"
     version                     = "1.0.0"
 
     environment_tag             = local.environment
@@ -54,8 +54,8 @@ module "network-spoke" {
 
 VM deployed to an existing Resource Group.<br>
 <pre>
-module "network-spoke" {
-    source                      = "app.terraform.io/ANET/network-spoke/azure"
+module "linux-vm" {
+    source                      = "app.terraform.io/ANET/linux-vm/azure"
     version                     = "1.0.0"
 
     environment_tag             = local.environment
